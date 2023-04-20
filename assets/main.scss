@@ -1,0 +1,20 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+@import 'tale';
+
+/* Sticky Navbar */
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 1000;
+  }
+
+  /* Add padding to the main content to account for the sticky navbar */
+main {
+  padding-top: 60px; /* Adjust this value depending on the height of your navbar */
+}
