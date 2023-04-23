@@ -48,7 +48,7 @@ When you´re debugging and jump into a metod call from SerivceImpl, you´re redi
 <br>
 
 
-# Refactor anti-pattern occurrences
+# Refactor Unnecessary Interfaces
 
 If you find yourself working on a project that follows this anti-pattern
 you can easily refactor this using InteliJ by following these steps:
