@@ -23,24 +23,24 @@ Service service = new ServiceImpl();
 
 Essentially, each class follows a naming convention where it is named `_ServiceImpl` and is the only implementation of an interface named `_Service`.
 
-
 Although interfaces have their place, creating one that only mirrors one class is counterproductive and leads to the following problems identified by Adam Bien 13 years ago [[3](#ref-3)]:
 
 
- **1. Imagine you get another implementation (thats the whole point of an interface) - how would you name it?**
+ > Imagine you get another implementation (thats the whole point of an interface) - how would you name it?
 
 <div style="padding-left: 30px;">
 If a suitable name cannot be found for an implementing class, it often indicates that the class may be overly complex or trying to do too many things, potentially violating the Single Responsibility principle.
 </div>
 <br>
 
-**2. It doubles the amount of artifacts - and significantly increases the "complexity"**
+> It doubles the amount of artifacts - and significantly increases the "complexity"
+
 <div style="padding-left: 30px;">
 Now you have the clutter of two files instead of one for everything - 1 for the price of 2.
 </div>
 <br>
 
-**3. The navigation in the IDE is less fluent**
+> The navigation in the IDE is less fluent
 
 <div style="padding-left: 30px;">
 When you´re debugging and jump into a method call from ServiceImpl, you´re redirected to the interface signature and not the actual implementation you want. Although it may appear to be a minor inconvenience, it's important to note that as a software developer, the majority of your time is spent reading code.
