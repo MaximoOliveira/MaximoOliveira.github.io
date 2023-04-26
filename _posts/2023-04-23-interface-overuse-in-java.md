@@ -8,8 +8,8 @@ excerpt_separator: <!--more-->
 
 Unfortunately, it´s still common to see the practice of coupling every class with an interface, even if that means we only have one implementation.
 <!--more-->
-Many articles discuss this problem [[1](#ref-1), [2](#ref-2),
-[3](#ref-3), [4](#ref-4)], but they fail to offer practical guidance on how to refactor it in an existing project.
+Many resources discuss this problem [[1](#ref-1), [2](#ref-2),
+[3](#ref-3), [4](#ref-4), [5](#ref-5)], but they fail to offer practical guidance on how to refactor it in an existing project.
 
 This post aims to address the issue by providing a quick refactoring solution.
 
@@ -24,7 +24,7 @@ Service service = new ServiceImpl();
 Essentially, each class follows a naming convention where it is named `_ServiceImpl` and is the only implementation of an interface named `_Service`.
 
 
-Although interfaces have their place, creating one that only mirrors one class implementation is often an unnecessary step as it leads to the following problems identified by Adam Bien 13 years ago [[3](#ref-3)]:
+Although interfaces have their place, creating one that only mirrors one class is counterproductive and leads to the following problems identified by Adam Bien 13 years ago [[3](#ref-3)]:
 
 
  **1. Imagine you get another implementation (thats the whole point of an interface) - how would you name it?**
@@ -43,15 +43,15 @@ Now you have the clutter of two files instead of one for everything - 1 for the 
 **3. The navigation in the IDE is less fluent**
 
 <div style="padding-left: 30px;">
-When you´re debugging and jump into a metod call from SerivceImpl, you´re redirected to the interface signature and not the actual implementation you want. Although it may appear to be a minor inconvenience, it's important to note that as a software developer, the majority of your time is spent reading code.
+When you´re debugging and jump into a method call from ServiceImpl, you´re redirected to the interface signature and not the actual implementation you want. Although it may appear to be a minor inconvenience, it's important to note that as a software developer, the majority of your time is spent reading code.
 </div>
 <br>
 
+For a more in-depth read on this problem, I recommended the first section of [Victor Rentea´s post](https://victorrentea.ro/blog/overengineering-in-onion-hexagonal-architectures/).
+
+Now let´s see how we can quickly refactor this anti-pattern when it occurs frequently within a project.
 
 # Refactor Unnecessary Interfaces
-
-If you find yourself working on a project that follows this anti-pattern
-you can easily refactor this using InteliJ by following these steps:
 
 1. Press Shift twice to bring up the `Search Everywhere` dialog.
 2. Type `run inspection by name` and select the option when it appears.
@@ -85,3 +85,5 @@ With these steps all references to a single interface are removed and replaced w
 3. <a id="ref-3"></a>Adam Bien. "Service s = new ServiceImpl() - Why?" Adam Bien's Weblog, 2010. <https://www.adam-bien.com/roller/abien/entry/service_s_new_serviceimpl_why>
 
 4. <a id="ref-4"></a>Anthony Steele. "Interfaces are overused" Anthony Steele's Weblog, 2021. <https://www.anthonysteele.co.uk/InterfacesAreOverused>
+
+5. <a id="ref-4"></a>Victor Rentea. "overengineering-in-onion-hexagonal-architectures" Victor Rentea's Weblog, 2023. <https://victorrentea.ro/blog/overengineering-in-onion-hexagonal-architectures/>
