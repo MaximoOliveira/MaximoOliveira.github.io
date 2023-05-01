@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Simplifying Java: Eliminating One-to-One Interfaces"
+title: "Eliminating One-to-One Interfaces in Java"
 author: "Maximo Oliveira"
 tags: Anti-pattern, Interface-Overuse
 excerpt_separator: <!--more-->
