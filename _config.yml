@@ -3,9 +3,6 @@ title:          Maximo Oliveira
 baseurl:        ""
 url: "https://maximooliveira.com/"
 
-# Google Analytics
-google_analytics: G-B5NMFWQ9QW
-
 # Author
 author:
   name:         Maximo Oliveira
@@ -14,7 +11,7 @@ author:
 # social
 social:
   github: MaximoOliveira
-  linkedin: https://www.linkedin.com/in/m%C3%A1ximo-oliveira-979b44173/
+  linkedin: https://www.linkedin.com/in/maximo-oliveira/
   default_txt: "Follow On"
 
 # Build settings
