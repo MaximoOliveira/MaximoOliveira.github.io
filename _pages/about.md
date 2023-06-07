@@ -8,7 +8,7 @@ Hi, I´m Max! I graduated in Computer Science from the University of Lisbon, whe
 
 <div class="social-icons">
     <a href="https://github.com/MaximoOliveira" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
-    <a href="https://www.linkedin.com/in/max-oliveira-979b44173/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+    <a href="https://www.linkedin.com/in/maximo-oliveira/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
 </div>
 
 ### Disclaimer
