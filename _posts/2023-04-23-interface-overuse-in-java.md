@@ -36,7 +36,7 @@ If a suitable name cannot be found for an implementing class, it often indicates
 > It doubles the amount of artifacts - and significantly increases the "complexity"
 
 <div style="padding-left: 30px;">
-Now you have the clutter of two files instead of one for everything - 1 for the price of 2.
+Now you have the clutter of two files instead of one for everything.
 </div>
 <br>
 
