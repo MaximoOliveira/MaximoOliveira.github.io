@@ -19,15 +19,15 @@ When you're fixing a bug or just checking how your server works, you typically m
 From <a href="https://www.jetbrains.com/help/idea/altering-the-program-s-execution-flow.html#reload_classes">Intellij's documentation: </a>
 
 <details>
-  <summary style="color:#4a9ae1;">You can reload a single file</summary>
+  <summary style="color:#4a9ae1;">You can reload a single class</summary>
  <li>Right-click in the editor tab of the modified file and select <b>Compile and Reload File</b>. </li>
 <p>
-<img src="../assets/java-productivity-tips/reload-single-file.png">
+<img src="../assets/java-productivity-tips/reload-single-class.png">
 </p>
 </details>
 
 <details>
-  <summary style="color:#4a9ae1;">You can also reload all modified files</summary>
+  <summary style="color:#4a9ae1;">You can also reload all modified classes</summary>
  <li>In the main menu, go to <b> Run | Debugging Actions | Reload Changed Classes </b> .</li>
 <p>
 <img src="../assets/java-productivity-tips/reload-changed-classes.png">
@@ -36,3 +36,5 @@ From <a href="https://www.jetbrains.com/help/idea/altering-the-program-s-executi
 
 <br>
 Keep in mind there are some <a href="https://www.jetbrains.com/help/idea/altering-the-program-s-execution-flow.html#hotswap-limitations">Hotswap limitations</a>. It will only work with non-structural code changes (changing an implementation of a method). HotSwap will not work when you change the class members or method signatures.
+
+Given you'll spend most of your time debugging as a developer, I highly recommend the entire 'Debugging' section from Intellij's documentation, especially the <a href="https://www.jetbrains.com/help/idea/altering-the-program-s-execution-flow.html">Alter the program's execution flow</a> part.
