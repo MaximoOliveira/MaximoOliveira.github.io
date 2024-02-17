@@ -9,22 +9,28 @@
 
 <url>
   <loc>https://maximooliveira.com/</loc>
-  <lastmod>2023-05-01T13:56:41+00:00</lastmod>
+  <lastmod>2024-17-02T13:56:41+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://maximooliveira.com/tags/</loc>
-  <lastmod>2023-05-01T13:56:41+00:00</lastmod>
+  <lastmod>2024-17-02T13:56:41+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://maximooliveira.com/about/</loc>
-  <lastmod>2023-05-01T13:56:41+00:00</lastmod>
+  <lastmod>2024-17-02T13:56:41+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://maximooliveira.com/2023-04-23/interface-overuse-in-java</loc>
-  <lastmod>2023-05-01T13:56:41+00:00</lastmod>
+  <lastmod>2024-17-02T13:56:41+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+
+<url>
+  <loc>https://maximooliveira.com/2023-02-17/interface-overuse-in-java</loc>
+  <lastmod>2024-17-02T13:56:41+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 
