@@ -42,7 +42,7 @@ Given you'll spend most of your time debugging as a developer, I highly recommen
 
 ## 2. Debugging backwards by exploring previous stack frames
 
-Suppose you're debugging and have set breakpoints in two methods: a() and b(). You're inspecting b() but suddenly realize you need to review something in a() again. Instead of restarting the debug process, you can simply jump back to a() to re-examine what happened there. This saves you time by letting you quickly revisit previous steps without having to go through everything again.
+Suppose you're debugging and have set breakpoints in two methods: `a()` and `b()`. You're inspecting `b()` but suddenly realize you need to review something in `a()` again. Instead of restarting the debug process, you can simply jump back to `a()` to re-examine what happened there. This saves you time by letting you quickly revisit previous steps without having to go through everything again.
 
 <details>
   <summary style="color:#4a9ae1;">You are currently in b()</summary>
