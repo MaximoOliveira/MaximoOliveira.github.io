@@ -65,9 +65,9 @@ Managing dependencies in Java can get tricky, especially when there are conflict
 
 For example, if you have two versions of a logging library that are causing problems, Maven Helper will point them out. You can then decide which version to keep, clearing up the conflict without having to dig through your project files manually.
 
-## 4. Narrow down searches in IntelliJ with file Masks
+## 4. Narrow down searches with file Masks
 
-When looking for a word in your project, test files often show up too much in the results. To fix this, IntelliJ lets you filter out these files using file masks. This means you won't see test files in your search and can find what you need faster.
+When looking for a word in your project, test files often show up too much in the results. To fix this you can use file masks. This allows you to tell IntelliJ which files you want to include or exclude in your search.
 
 For example, if you're trying to search for "user" but want to exclude test files, just apply the `!*Test.java` file mask in your search. This filters out any files with 'Test.java' in their name, streamlining your results.
 
