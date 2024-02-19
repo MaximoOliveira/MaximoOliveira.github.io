@@ -1,14 +1,15 @@
 ---
 layout: post
-title: "IntelliJ Productivity Tips"
+title: "Java Productivity Tips"
 author: "Maximo Oliveira"
 tags: Java IntelliJ
 excerpt_separator: <!--more-->
 ---
 
-IntelliJ IDEA offers a lot of powerful features that make development easier. In this post, I'm sharing some great tips I've learned from others, that I've found to increase my productivity.
+Choosing the right IDE can significantly improve your development experience. Among Java developers, IntelliJ and Eclipse are the top picks. From my experience working with over 40 people across various teams, 99% of them use IntelliJ, and they do so for <a href="https://stackshare.io/stackups/eclipse-vs-intellij-idea">good reasons</a>.
 <!--more-->
 
+However, I've noticed that many people are unaware of some of IntelliJ's great features, which have significantly improved my experience as a developer. In this post, I'll share some of these tips.
 
 ## 1. Don't restart your server after you modify a class
 
