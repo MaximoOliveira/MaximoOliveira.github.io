@@ -35,5 +35,50 @@ main {
 }
 
 .social-icons a:hover {
-  color: #0077b5; /* Change this to any color you want on hover */
+  color: #0077b5;
+}
+
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+  color: inherit;
+}
+
+.project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+.project-image {
+  width: 100%;
+  height: auto;
+}
+
+.project-details {
+  padding: 20px;
+}
+
+.project p {
+  margin: 0;
+}
+
+.project a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.project a:hover {
+  text-decoration: underline;
 }
