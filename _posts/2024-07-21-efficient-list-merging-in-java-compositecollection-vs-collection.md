@@ -6,19 +6,19 @@ tags: Java Performance Memory
 excerpt_separator: <!--more-->
 ---
 
-When you need to merge multiple collections for read-only access in a memory-sensitive program, choosing the right method can be crucial. Common methods include Stream.concat, Stream.of, and Collection.addAll. 
+When you need to merge multiple collections for read-only access in a memory-sensitive program, choosing the right method is crucial. Common methods include Stream.concat, Stream.of, and Collection.addAll.
 
 <!--more-->
 
-In this post, we'll explore why CompositeCollection from Apache Commons Collections is the best option for read-only access. We will also benchmark both CompositeCollection and addAll to compare their performance and memory efficiency, providing detailed results on memory savings and execution times.
+In this post, we'll explore why CompositeCollection from Apache Commons Collections is the best option for read-only access. We'll benchmark CompositeCollection and addAll to compare their performance and memory efficiency, providing detailed results on memory savings and execution times.
 
 ## Table of Contents
-- [Common Ways of Merging Collections](#1-common-ways-of-merging-collections)
-- [Problem: High memory usage](#2-problem-high-memory-usage)
-- [A Better Approach with CompositeCollection](#3-a-better-approach-with-compositecollection)
-- [Performance Comparison: CompositeCollection vs. addAll](#4-performance-comparison-compositecollection-vs-addall)
-- [Results](#results)
-- [Conclusion](#conclusion)
+- [1. Common Ways of Merging Collections](#1-common-ways-of-merging-collections)
+- [2. Problem: High memory usage](#2-problem-high-memory-usage)
+- [3. A Better Approach with CompositeCollection](#3-a-better-approach-with-compositecollection)
+- [4. Performance Comparison: CompositeCollection vs. addAll](#4-performance-comparison-compositecollection-vs-addall)
+- [5. Results](#results)
+- [6. Conclusion](#conclusion)
 
 ## 1. Common Ways of Merging Collections
 
@@ -78,7 +78,7 @@ Memory usage increases because all elements are duplicated in the new collection
 
 ## 3. A Better Approach with CompositeCollection
 
-`CompositeCollection` from Apache Commons Collections provides an efficient way to create a read-only view over multiple collections without duplicating elements. Instead of creating a new collection and copying all the elements into it, `CompositeCollection` keeps references to the original collections.
+[CompositeCollection](https://commons.apache.org/proper/commons-collections/apidocs/org/apache/commons/collections4/collection/CompositeCollection.html) from Apache Commons Collections provides an efficient way to create a read-only view over multiple collections without duplicating elements. Instead of creating a new collection and copying all the elements into it, `CompositeCollection` keeps references to the original collections.
 
 {% highlight java %}
 
@@ -112,7 +112,8 @@ The main goal here is to test the hypothesis that `CompositeCollection` is more 
 
 ### Methodology
 
-To evaluate the efficiency of `CompositeCollection` against `addAll`, I’m using the <a href="https://www.baeldung.com/java-microbenchmark-harness">Java Microbenchmark Harnesss</a> (JMH). JMH is a Java library specifically designed for benchmarking code, providing accurate and reliable performance measurements. Using JMH helps mitigate common benchmarking pitfalls, like JVM optimizations and warm-up times, ensuring the results are robust and reproducible.
+To evaluate the efficiency of `CompositeCollection` against `addAll`, I’m using the 
+[Java Microbenchmark Harness (JMH)](https://www.baeldung.com/java-microbenchmark-harness). JMH is a Java library specifically designed for benchmarking code, providing accurate and reliable performance measurements. Using JMH helps mitigate common benchmarking pitfalls, like JVM optimizations and warm-up times, ensuring the results are robust and reproducible.
 
 ### Experimental Setup
 
@@ -146,7 +147,7 @@ The benchmark test includes two primary methods:
 
 Each method is annotated to be benchmarked under the same conditions, ensuring a fair comparison.
 
-For the sake of reproducible software, the code and results can be found here: [GitHub Repository](https://github.com/).
+For the sake of reproducible software, the code and results can be found here: [GitHub Repository](https://github.com/MaximoOliveira/collection-benchmark).
 
 We can also visualize the results by dragging the benchmark-results.json file into [JMH Visualizer](https://jmh.morethan.io/).
 
@@ -234,7 +235,7 @@ public class CollectionBenchmark {
 {% endhighlight %}
 </details>
 
-## Results
+## 5. Results
 
 The benchmark tests covered four different list sizes: 50, 1,000, 10,000, and 50,000 elements. Each test was executed to compare the performance of two methods: `addAll` and `CompositeCollection`.
 
@@ -431,7 +432,7 @@ For example, if `benchmarkAddAll` for a parameter list size of 50 (total 100 ele
 
 ![score](../assets/composite-collection/gc-time.png "score")
 
-## Conclusion
+## 6. Conclusion
 
 The results of our benchmark tests provide a clear comparison between the traditional `addAll` method and the `CompositeCollection` approach from Apache Commons Collections for merging collections. The data highlights significant differences in performance and resource utilization.
 
