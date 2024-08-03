@@ -1,5 +1,5 @@
 - name: Destination Matcher
-  description: A travel planner that helps people from different locations meet at a single destination
+  description: A travel planner that helps people in different locations meet at a single destination
   url: https://www.destinationmatcher.com/
   image: /assets/images/destination_matcher.png
 
