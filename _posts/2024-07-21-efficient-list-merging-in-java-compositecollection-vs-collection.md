@@ -282,9 +282,9 @@ For example, if `benchmarkAddAll` for a parameter list size of 50 (total 100 ele
 
 #### GC Allocation Rate (MB/sec)
 
-This metric shows the rate at which memory is allocated by the garbage collector (GC) during the benchmark, measured in megabytes per second (MB/sec). A higher rate indicates more frequent memory allocation, which can impact performance.
+This metric shows the rate at which memory is allocated by your application code during the benchmark, as tracked by the garbage collection subsystem, measured in megabytes per second (MB/sec). A higher rate indicates your code is creating more objects that will eventually need to be garbage collected, which can impact performance due to increased GC pressure.
 
-For example, if `benchmarkAddAll` for a parameter list size of 50 (total 100 elements) has a GC allocation rate of 8364.156 MB/sec, it means the GC is allocating 8364.156 megabytes of memory per second.
+For example, if benchmarkAddAll for a parameter list size of 50 (total 100 elements) has a GC allocation rate of 8364.156 MB/sec, it means your code is allocating 8364.156 megabytes of memory per second that will eventually become garbage and need to be cleaned up by the GC.
 
 <details>
   <summary style="color:#4a9ae1;">Table View - GC Allocation Rate (MB/sec)</summary>
