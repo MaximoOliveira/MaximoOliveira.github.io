@@ -1,15 +1,15 @@
 ---
 layout: post
-title: "Java Productivity Tips"
+title: "IntelliJ Productivity Tips for Java Developers"
 author: "Maximo Oliveira"
 tags: Java IntelliJ
 excerpt_separator: <!--more-->
 ---
 
-Choosing the right IDE can significantly improve your development experience. Among Java developers, IntelliJ and Eclipse are the top picks. From my experience working with over 40 people across various teams, 99% of them use IntelliJ, and they do so for <a href="https://stackshare.io/stackups/eclipse-vs-intellij-idea">good reasons</a>.
+IntelliJ is packed with powerful features that can significantly improve your development experience. However, I've noticed that many developers are unaware of some of its best capabilities.
 <!--more-->
 
-However, I've noticed that many people are unaware of some of IntelliJ's great features, which have significantly improved my experience as a developer. In this post, I'll share some of these tips.
+In this post, I'll share some tips that have made a real difference in my day-to-day workflow.
 
 ## 1. Don't restart your server after you modify a class
 
@@ -38,7 +38,7 @@ From <a href="https://www.jetbrains.com/help/idea/altering-the-program-s-executi
 <br>
 Keep in mind there are some <a href="https://www.jetbrains.com/help/idea/altering-the-program-s-execution-flow.html#hotswap-limitations">Hotswap limitations</a>. It will only work with non-structural code changes (changing an implementation of a method). HotSwap will not work when you change the class members or method signatures.
 
-Given you'll spend most of your time debugging as a developer, I highly recommend the entire 'Debugging' section from Intellij's documentation, especially the <a href="https://www.jetbrains.com/help/idea/altering-the-program-s-execution-flow.html">Alter the program's execution flow</a> part.
+Given how much time you'll spend debugging, I highly recommend the entire 'Debugging' section from IntelliJ's documentation, especially the <a href="https://www.jetbrains.com/help/idea/altering-the-program-s-execution-flow.html">Alter the program's execution flow</a> part.
 
 
 ## 2. Debugging backwards by exploring previous stack frames
@@ -89,3 +89,36 @@ For example, if you're trying to search for "user" but want to exclude test file
 </details>
 <br>
 You can also customise the `File Mask` value to your liking and exclude multiple file extensions.
+
+## 5. Conditional Breakpoints
+
+Regular breakpoints pause execution every time they're hit, which can be frustrating when debugging loops or methods that are called frequently. Conditional breakpoints solve this by only pausing when a specific condition is met.
+
+To set one up, right-click on an existing breakpoint (or the gutter where you'd place one) and enter a condition. For example, if you're debugging a loop processing user records, you can set a condition like `user.getId().equals("123")` to only break when that specific user is being processed.
+
+This is especially useful when:
+- Debugging loops with thousands of iterations
+- Investigating issues that only occur with specific data
+- Avoiding the tedium of clicking "Resume" repeatedly
+
+## 6. Stream Debugger
+
+Java Streams are powerful but notoriously difficult to debug. When you set a breakpoint inside a stream pipeline, it's hard to see what's happening at each step.
+
+IntelliJ's Stream Debugger solves this. When you're stopped at a breakpoint in a stream operation, click **Trace Current Stream Chain** in the debugger toolbar. This opens a visual representation showing the data transformation at each step of the pipeline — from the source, through each `map`, `filter`, or `flatMap`, all the way to the terminal operation.
+
+This feature has saved me hours when debugging complex stream transformations.
+
+## 7. Postfix Completion
+
+Postfix completion lets you transform an expression by typing a dot and a keyword after it. Instead of going back to wrap your code, you type forward.
+
+Some useful examples:
+
+- `myVar.null` + Tab → `if (myVar == null) {}`
+- `myVar.notnull` + Tab → `if (myVar != null) {}`
+- `myList.for` + Tab → `for (Type item : myList) {}`
+- `myValue.return` + Tab → `return myValue;`
+- `expression.try` + Tab → wraps in try-catch block
+
+You can see all available postfix templates in **Settings → Editor → General → Postfix Completion**. Once you get used to this, it becomes second nature and speeds up your coding flow significantly.
